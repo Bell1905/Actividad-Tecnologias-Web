@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio - Simulador Educativo Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50 text-gray-800 font-sans">
+    
+    <header class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white shadow-xl">
+        <div class="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+                <h1 class="text-3xl font-extrabold tracking-tight">Simulador Web</h1>
+                <p class="mt-1 text-sm text-indigo-200 font-medium tracking-wide uppercase">Aprende cómo funciona el internet</p>
+            </div>
+
+            <nav aria-label="Navegación principal" class="flex flex-wrap gap-3">
+                <a href="index.html" class="rounded-full bg-cyan-400 px-5 py-2 text-sm font-bold text-indigo-950 shadow-sm transition hover:bg-cyan-300 focus:ring-2 focus:ring-cyan-300 focus:outline-none" aria-current="page">Inicio</a>
+                <a href="contenido.html" class="rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20 focus:ring-2 focus:ring-white/50 focus:outline-none">Simulador</a>
+                <a href="contacto.html" class="rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20 focus:ring-2 focus:ring-white/50 focus:outline-none">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow mx-auto w-full max-w-7xl px-6 py-10">
+        
+        <section class="mb-12 grid gap-8 lg:grid-cols-2 items-center rounded-3xl border border-gray-200 bg-white p-8 shadow-md">
+            <div>
+                <span class="inline-flex items-center rounded-md bg-indigo-50 px-3 py-1.5 text-xs font-bold uppercase text-indigo-700 ring-1 ring-inset ring-indigo-700/10 mb-4">Proyecto Académico</span>
+                <h2 class="text-4xl font-bold text-gray-900 leading-tight">Descubre el viaje de los datos en la Web</h2>
+                <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                    ¿Alguna vez te has preguntado qué sucede en milisegundos cuando escribes una URL en tu navegador? Acompáñanos en este recorrido interactivo a través de servidores DNS, protocolos HTTP y motores de renderizado.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="contenido.html" class="inline-flex items-center justify-center rounded-full bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        Iniciar Simulador &rarr;
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <img src="img/hero.jpg" alt="Estudiante analizando código y redes en múltiples pantallas de computadora" class="rounded-2xl shadow-lg w-full max-w-md object-cover border border-gray-100 transition-transform duration-300 hover:scale-105">
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Fases del Ecosistema Web</h3>
+            <div class="grid gap-6 md:grid-cols-3">
+                
+                <article class="group flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-teal-500 text-white font-bold mb-4">1</div>
+                    <h4 class="text-xl font-bold text-gray-900">Servidores DNS</h4>
+                    <p class="mt-2 text-sm text-gray-600 flex-grow">La agenda telefónica del internet que traduce dominios legibles en direcciones IP numéricas.</p>
+                </article>
+
+                <article class="group flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-rose-500 text-white font-bold mb-4">2</div>
+                    <h4 class="text-xl font-bold text-gray-900">Protocolo HTTP</h4>
+                    <p class="mt-2 text-sm text-gray-600 flex-grow">El lenguaje de comunicación entre tu navegador (cliente) y los servidores remotos.</p>
+                </article>
+
+                <article class="group flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 text-white font-bold mb-4">3</div>
+                    <h4 class="text-xl font-bold text-gray-900">Renderizado</h4>
+                    <p class="mt-2 text-sm text-gray-600 flex-grow">El ensamblaje final donde HTML, CSS y JS se transforman en la interfaz visual que disfrutas.</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white py-8 mt-auto">
+        <div class="mx-auto max-w-7xl px-6 text-center text-sm text-gray-500 font-medium">
+            <p>&copy; 2026 Rediseño Centrado en el Usuario - Cumplimiento WCAG</p>
+        </div>
+    </footer>
+
+</body>
+</html>
