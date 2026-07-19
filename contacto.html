@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Simulador Educativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50 text-gray-800 font-sans relative">
+    
+    <header class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white shadow-xl">
+        <div class="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+                <h1 class="text-3xl font-extrabold tracking-tight">Simulador Web</h1>
+                <p class="mt-1 text-sm text-indigo-200 font-medium tracking-wide uppercase">Soporte Técnico y Consultas</p>
+            </div>
+
+            <nav aria-label="Navegación principal" class="flex flex-wrap gap-3">
+                <a href="index.html" class="rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20 focus:ring-2 focus:ring-white/50 focus:outline-none">Inicio</a>
+                <a href="contenido.html" class="rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20 focus:ring-2 focus:ring-white/50 focus:outline-none">Simulador </a>
+                <a href="contacto.html" class="rounded-full bg-cyan-400 px-5 py-2 text-sm font-bold text-indigo-950 shadow-sm transition hover:bg-cyan-300 focus:ring-2 focus:ring-cyan-300 focus:outline-none" aria-current="page">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow mx-auto w-full max-w-7xl px-6 py-10">
+        
+        <section class="grid gap-10 lg:grid-cols-2 rounded-3xl border border-gray-200 bg-white p-8 shadow-md">
+            
+            <div class="flex flex-col justify-center">
+                <span class="inline-flex items-center w-max rounded-md bg-rose-50 px-3 py-1.5 text-xs font-bold uppercase text-rose-700 ring-1 ring-inset ring-rose-700/10 mb-4">Atención al Usuario</span>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">¿Tienes dudas o sugerencias?</h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    Estamos aquí para ayudarte a comprender mejor las tecnologías web. Completa el formulario de la derecha con tus datos y te responderemos a la brevedad posible.
+                </p>
+                
+                <img src="img/soporte.jpg" alt="Especialista de soporte técnico trabajando en su computadora con auriculares" class="rounded-2xl shadow-md border border-gray-100 object-cover w-full h-64 transition-transform duration-300 hover:scale-[1.02]">
+            </div>
+
+            <div class="bg-gray-50 p-8 rounded-2xl ring-1 ring-inset ring-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">Envíanos un mensaje</h3>
+                
+                <form action="#" method="POST" class="space-y-5">
+                    <div>
+                        <label for="nombre" class="block text-sm font-bold text-gray-700 mb-1">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" required aria-required="true" placeholder="Ej. Juan Pérez" class="block w-full rounded-xl border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-bold text-gray-700 mb-1">Correo electrónico *</label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="tu@correo.com" class="block w-full rounded-xl border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition">
+                    </div>
+
+                    <div>
+                        <label for="asunto" class="block text-sm font-bold text-gray-700 mb-1">Asunto de consulta</label>
+                        <select id="asunto" name="asunto" class="block w-full rounded-xl border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition bg-white">
+                            <option value="duda">Duda técnica sobre HTTP</option>
+                            <option value="sugerencia">Sugerencia para el simulador</option>
+                            <option value="problema">Reportar un problema</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="mensaje" class="block text-sm font-bold text-gray-700 mb-1">Tu mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required aria-required="true" placeholder="Escribe aquí tu consulta detallada..." class="block w-full rounded-xl border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 transition resize-none"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="mt-2 w-full rounded-full bg-indigo-600 px-4 py-3 text-sm font-bold text-white shadow-md transition-all hover:bg-indigo-500 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2">
+                        Enviar mensaje de soporte
+                    </button>
+                </form>
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white py-8 mt-auto">
+        <div class="mx-auto max-w-7xl px-6 text-center text-sm text-gray-500 font-medium">
+            <p>&copy; 2026 Rediseño Centrado en el Usuario - Cumplimiento WCAG</p>
+        </div>
+    </footer>
+
+</body>
+</html>

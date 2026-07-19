@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador - Rediseño Accesible</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50 text-gray-800 font-sans relative">
+    
+    <header class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white shadow-xl">
+        <div class="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+                <h1 class="text-3xl font-extrabold tracking-tight">Simulador Web</h1>
+                <p class="mt-1 text-sm text-indigo-200 font-medium tracking-wide uppercase">Módulo Interactivo</p>
+            </div>
+
+            <nav aria-label="Navegación principal" class="flex flex-wrap gap-3">
+                <a href="index.html" class="rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20 focus:ring-2 focus:ring-white/50 focus:outline-none">Inicio</a>
+                <a href="contenido.html" class="rounded-full bg-cyan-400 px-5 py-2 text-sm font-bold text-indigo-950 shadow-sm transition hover:bg-cyan-300 focus:ring-2 focus:ring-cyan-300 focus:outline-none" aria-current="page">Simulador</a>
+                <a href="contacto.html" class="rounded-full bg-white/10 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20 focus:ring-2 focus:ring-white/50 focus:outline-none">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow mx-auto w-full max-w-7xl px-6 py-10">
+        
+        <section class="mb-10 rounded-3xl border border-gray-200 bg-white p-8 shadow-md">
+            <div class="mb-6 flex flex-wrap gap-3">
+                <span class="inline-flex items-center rounded-md bg-indigo-50 px-3 py-1.5 text-xs font-bold uppercase text-indigo-700 ring-1 ring-inset ring-indigo-700/10">Interactivo</span>
+                <span class="inline-flex items-center rounded-md bg-teal-50 px-3 py-1.5 text-xs font-bold uppercase text-teal-700 ring-1 ring-inset ring-teal-700/10">Paso a paso</span>
+            </div>
+
+            <div class="grid gap-8 lg:grid-cols-[2fr_1fr]">
+                <article>
+                    <h2 class="text-3xl font-bold text-gray-900">¿Qué ocurre al ingresar una URL?</h2>
+                    <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                        Explora el ciclo de vida de una petición web. Haz clic en las tarjetas de abajo para abrir la ventana de detalles de cada fase, desde que el usuario escribe la dirección hasta que el navegador dibuja la interfaz.
+                    </p>
+
+                    <div role="alert" class="mt-8 border-l-4 border-cyan-500 bg-cyan-50 p-4 rounded-r-lg">
+                        <div class="flex items-center">
+                            <div class="ml-3">
+                                <p class="text-sm text-cyan-800">
+                                    <strong class="font-bold text-cyan-900">Tip de Accesibilidad:</strong> Puedes navegar por estas opciones usando la tecla <strong>TAB</strong> y abrirlas presionando <strong>ENTER</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="space-y-6">
+                    <div class="rounded-2xl bg-gray-50 p-6 ring-1 ring-inset ring-gray-200">
+                        <h3 class="text-base font-bold text-gray-900 flex items-center gap-2">
+                            <span>Resumen de Etapas</span>
+                        </h3>
+                        <div class="mt-4 flex flex-col gap-3">
+                            <div class="flex items-center gap-3">
+                                <div class="h-2 w-2 rounded-full bg-indigo-500"></div>
+                                <span class="text-sm font-medium text-gray-700">1. Petición URL</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="h-2 w-2 rounded-full bg-teal-500"></div>
+                                <span class="text-sm font-medium text-gray-700">2. Resolución DNS</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="h-2 w-2 rounded-full bg-rose-500"></div>
+                                <span class="text-sm font-medium text-gray-700">3. Solicitud HTTP</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            
+            <article class="group flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600 text-white font-bold">1</div>
+                    <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Inicio</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Solicitud</h3>
+                <p class="mt-2 text-sm text-gray-600 flex-grow">El navegador prepara la petición inicial.</p>
+                <button onclick="mostrarDetalle('solicitud')" aria-haspopup="dialog" class="mt-6 w-full rounded-xl bg-indigo-50 py-2.5 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-100 focus:ring-2 focus:ring-indigo-400 focus:outline-none">Ver Fase 1</button>
+            </article>
+
+            <article class="group flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-teal-500 text-white font-bold">2</div>
+                    <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Red</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Servidor DNS</h3>
+                <p class="mt-2 text-sm text-gray-600 flex-grow">Traducción de dominio a Dirección IP.</p>
+                <button onclick="mostrarDetalle('dns')" aria-haspopup="dialog" class="mt-6 w-full rounded-xl bg-teal-50 py-2.5 text-sm font-semibold text-teal-700 transition hover:bg-teal-100 focus:ring-2 focus:ring-teal-400 focus:outline-none">Ver Fase 2</button>
+            </article>
+
+            <article class="group flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500 text-white font-bold">3</div>
+                    <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Protocolo</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Conexión HTTP</h3>
+                <p class="mt-2 text-sm text-gray-600 flex-grow">Envío y recepción de paquetes de datos.</p>
+                <button onclick="mostrarDetalle('http')" aria-haspopup="dialog" class="mt-6 w-full rounded-xl bg-rose-50 py-2.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 focus:ring-2 focus:ring-rose-400 focus:outline-none">Ver Fase 3</button>
+            </article>
+
+            <article class="group flex flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600 text-white font-bold">4</div>
+                    <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Navegador</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Renderizado</h3>
+                <p class="mt-2 text-sm text-gray-600 flex-grow">Interpretación de HTML, CSS y JS.</p>
+                <button onclick="mostrarDetalle('render')" aria-haspopup="dialog" class="mt-6 w-full rounded-xl bg-purple-50 py-2.5 text-sm font-semibold text-purple-700 transition hover:bg-purple-100 focus:ring-2 focus:ring-purple-400 focus:outline-none">Ver Fase 4</button>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-200 bg-white py-8 mt-auto">
+        <div class="mx-auto max-w-7xl px-6 text-center text-sm text-gray-500 font-medium">
+            <p>&copy; 2026 Rediseño Centrado en el Usuario - Cumplimiento WCAG</p>
+        </div>
+    </footer>
+
+    <div id="miModal" class="hidden fixed inset-0 z-50 overflow-y-auto" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="cerrarModal()"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4 text-center z-50 relative pointer-events-none">
+            <div class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-2xl transition-all my-8 w-full max-w-lg p-6 border border-gray-100 pointer-events-auto">
+                
+                <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+                    <h3 class="text-2xl font-bold text-gray-900" id="modalTitulo">Título</h3>
+                    <button onclick="cerrarModal()" class="text-gray-400 hover:text-gray-600 rounded-lg p-1 hover:bg-gray-100 transition focus:outline-none focus:ring-2 focus:ring-indigo-500" aria-label="Cerrar ventana">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="mt-4">
+                    <div id="modalCuerpo" class="text-sm text-gray-600 space-y-3 leading-relaxed">
+                        </div>
+                </div>
+
+                <div class="mt-6 flex justify-end">
+                    <button onclick="cerrarModal()" id="btnCerrarModal" type="button" class="inline-flex justify-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 focus:outline-none">
+                        Entendido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const informacionDetallada = {
+            solicitud: {
+                titulo: "Fase 1: Solicitud e Ingreso de URL",
+                cuerpo: `<p>Al ingresar una dirección, el navegador descompone la cadena en protocolo (https), host (dominio) y la ruta específica del archivo.</p>`
+            },
+            dns: {
+                titulo: "Fase 2: Resolución DNS",
+                cuerpo: `<p>El Servidor DNS actúa como una agenda telefónica, traduciendo el nombre de dominio humano a una dirección IP numérica (ej. 192.168.1.1) que las computadoras entienden.</p>`
+            },
+            http: {
+                titulo: "Fase 3: Protocolo HTTP",
+                cuerpo: `<p>Se establece una conexión mediante métodos (como GET o POST). El servidor procesa la petición y devuelve un código de estado (como 200 OK) junto con los paquetes de datos.</p>`
+            },
+            render: {
+                titulo: "Fase 4: Motor de Renderizado",
+                cuerpo: `<p>El navegador recibe el código en bruto. Construye el DOM con el HTML, aplica los estilos CSS y ejecuta JavaScript para finalmente dibujar la página en la pantalla.</p>`
+            }
+        };
+
+        function mostrarDetalle(tema) {
+            const modal = document.getElementById('miModal');
+            const titulo = document.getElementById('modalTitulo');
+            const cuerpo = document.getElementById('modalCuerpo');
+
+            if (informacionDetallada[tema]) {
+                titulo.innerText = informacionDetallada[tema].titulo;
+                cuerpo.innerHTML = informacionDetallada[tema].cuerpo;
+                
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden'); // Evita que el fondo haga scroll
+                
+                // Mueve el foco al botón de cerrar para accesibilidad (lectores de pantalla)
+                setTimeout(() => document.getElementById('btnCerrarModal').focus(), 100);
+            }
+        }
+
+        function cerrarModal() {
+            const modal = document.getElementById('miModal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Accesibilidad: Cerrar con la tecla Escape
+        window.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                cerrarModal();
+            }
+        });
+    </script>
+</body>
+</html>
